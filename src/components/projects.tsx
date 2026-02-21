@@ -1,6 +1,6 @@
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
-import { X, Rocket, Brain, Globe } from "lucide-react";
+import { X, Rocket, Brain, Globe, GraduationCap, Github } from "lucide-react";
 
 const projects = [
   {
@@ -44,6 +44,22 @@ const projects = [
       "Rebuilt using Next.js App Router with server + client component architecture, end-to-end TypeScript type safety, and optimized data fetching patterns.",
     impact:
       "Achieved 20% frontend performance improvement with full type safety, reducing bugs and improving developer velocity.",
+  },
+  {
+    icon: <GraduationCap size={20} />,
+    codename: "Project Scholar",
+    title: "LearnFlow: AI-Powered EdTech Ecosystem",
+    stack: ["Next.js 16", "React 19", "Prisma", "PostgreSQL", "Gemini 1.5 Pro"],
+    summary:
+      "A comprehensive EdTech platform empowering educators with AI-driven tools and students with a streamlined learning experience.",
+    problem:
+      "Educators struggle with content creation friction and role ambiguity, while standard platforms lack enterprise-grade security like HTTP-only cookies and modular scalability.",
+    contribution:
+      "Designed a feature-based Next.js 16 architecture, integrated Gemini 1.5 for AI-generated summaries, and engineered a secure JWT-based RBAC system with server-side guards.",
+    impact:
+      "Reduced course setup time by 50%, achieved high-speed data fetching with TanStack Query, and created a future-proof modular codebase for rapid feature iteration.",
+    liveUrl: "https://edtech-two-swart.vercel.app/",
+    githubUrl: "https://github.com/uves-shaikh/edtech",
   },
 ];
 
@@ -186,6 +202,34 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
+
+              {(projects[selectedProject].liveUrl ||
+                projects[selectedProject].githubUrl) && (
+                <div className="flex flex-col sm:flex-row gap-3 pt-6 mt-6 border-t border-border/50">
+                  {projects[selectedProject].liveUrl && (
+                    <a
+                      href={projects[selectedProject].liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity whitespace-nowrap"
+                    >
+                      <Globe size={16} />
+                      Live Demo
+                    </a>
+                  )}
+                  {projects[selectedProject].githubUrl && (
+                    <a
+                      href={projects[selectedProject].githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-secondary text-secondary-foreground font-medium hover:bg-secondary/80 transition-colors whitespace-nowrap"
+                    >
+                      <Github size={16} />
+                      Source Code
+                    </a>
+                  )}
+                </div>
+              )}
             </motion.div>
           </motion.div>
         )}
