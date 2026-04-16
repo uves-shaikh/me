@@ -6,30 +6,30 @@ const projects = [
   {
     icon: <Rocket size={20} />,
     codename: "Project Alpha",
-    title: "Business Growth Operating System",
-    stack: ["React", "Node.js", "Neo4j", "Mapbox", "Python"],
+    title: "Multi-Tenant CRM & Analytics Platform",
+    stack: ["Next.js", "Neo4j", "PostgreSQL", "Python", "Mapbox", "GraphQL"],
     summary:
-      "A multi-panel platform for managing business operations with spatial visualization and real-time data workflows.",
+      "Enterprise CRM platform combining graph database for field sales with e-commerce analytics, serving 3+ beverage brands with AI-powered customer intelligence.",
     problem:
-      "Businesses lacked a unified system to manage user operations, admin workflows, and data correction—all in one place with spatial context.",
+      "Beverage brands needed a unified platform to manage field sales operations, e-commerce analytics, and customer intelligence across multiple tenants without data leakage, while processing lakhs of daily customer events for actionable insights.",
     contribution:
-      "Architected and built 3 independent panels (User, Admin, Data Correction) with real-time notifications, Mapbox spatial visualization, and Python + Cypher automation pipelines.",
+      "Architected multi-tenant infrastructure with Neo4j for sales operations and PostgreSQL for analytics, ensuring zero data leakage through dynamic table prefixing. Built 3-stage AI agent pipeline (Collector, Signal, Routing) processing customer events for identity resolution, churn prediction, and marketing optimization. Engineered automated sync pipelines for Shopify, Klaviyo, GA4, and Census data. Developed geospatial Battlemap interface with Mapbox for territory management across 10K+ retail locations. Implemented dual-backend GraphQL APIs powering Admin, Sales, and Data Correction panels with RFM segmentation and AI-generated routing.",
     impact:
-      "Enabled real-time spatial insights and automated data workflows, significantly reducing manual correction time and improving operational efficiency.",
+      "Enabled real-time customer intelligence processing lakhs of daily events, automated marketing channel allocation based on LTV thresholds, and provided field sales teams with geospatial insights for 10K+ locations—significantly improving operational efficiency and revenue optimization.",
   },
   {
     icon: <Brain size={20} />,
     codename: "Project Zenith",
     title: "AI-Powered Radiology Reporting Platform",
-    stack: ["React", "Node.js", "MongoDB", "Clerk", "Razorpay", "shadcn/ui"],
+    stack: ["Next.js", "React", "Node.js", "MongoDB", "OpenAI", "Electron"],
     summary:
-      "Structured reporting platform for radiologists with AI-assisted auto-filled findings and guided workflows.",
+      "Full-stack AI platform enabling radiologists to generate structured diagnostic reports through voice-to-text and real-time LLM streaming, reducing report creation time.",
     problem:
-      "Radiologists spent excessive time on manual, unstructured reporting, leading to inconsistencies and slower turnaround.",
+      "Radiologists spent excessive time on manual, unstructured reporting with inconsistent formatting and slow turnaround times. Existing solutions lacked multi-modal input, real-time AI assistance, and specialty-specific customization.",
     contribution:
-      "Built structured reporting templates with auto-filled findings, guided workflow, Clerk authentication, Razorpay payment integration, and polished UI with shadcn/ui.",
+      "Built comprehensive frontend with multi-modal input (voice recording with VAD, TipTap editor), template/macro management with specialty categorization, and real-time validation. Developed RESTful APIs for thread-based conversation management, AI-powered report generation with streaming responses (OpenAI, Grok), and MongoDB persistence with Clerk authentication. Implemented custom instruction injection, template marketplace, specialty-specific prompt engineering, and Razorpay payment integration. Optimized AI responses with context-aware prompts, model switching, and SSE-based streaming while maintaining HIPAA-compliant data handling. Deployed as both web and Electron desktop applications.",
     impact:
-      "Streamlined the entire radiology reporting workflow, enabling faster, more consistent report generation with built-in monetization.",
+      "Automated findings-to-report workflows with voice-to-text transcription (Soniox, Whisper) and real-time LLM streaming, enabling faster and more consistent report generation. Reduced report creation time through AI-powered automation while maintaining medical accuracy and compliance standards.",
   },
   {
     icon: <Globe size={20} />,
